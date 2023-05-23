@@ -7,7 +7,7 @@ const json_server_1 = __importDefault(require("json-server"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 var cors = require("cors");
 const server = json_server_1.default.create();
-const router = json_server_1.default.router("src/db.json");
+const router = json_server_1.default.router("src/tmp/db.json");
 const middlewares = json_server_1.default.defaults();
 const SECRET_KEY = "secret@@@@";
 server.use(middlewares);

@@ -4,7 +4,7 @@ import { Request, Response, NextFunction } from "express";
 var cors = require("cors");
 
 const server = jsonServer.create();
-const router = jsonServer.router("src/db.json");
+const router = jsonServer.router("src/tmp/db.json");
 const middlewares = jsonServer.defaults();
 
 const SECRET_KEY = "secret@@@@";
