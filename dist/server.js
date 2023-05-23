@@ -16,6 +16,9 @@ server.use(json_server_1.default.bodyParser);
 function generateToken(data) {
     return jsonwebtoken_1.default.sign(data, SECRET_KEY);
 }
+server.get("/", (req, res) => {
+    res.status(200).json({ value: "API" });
+});
 // Rota de login
 server.post("/login", (req, res) => {
     const { username, password } = req.body;

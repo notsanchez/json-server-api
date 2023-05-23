@@ -1,7 +1,7 @@
 import jsonServer from "json-server";
 import jwt from "jsonwebtoken";
 import { Request, Response, NextFunction } from "express";
-import cors from "cors";
+var cors = require("cors");
 
 const server = jsonServer.create();
 const router = jsonServer.router("src/db.json");
@@ -16,6 +16,10 @@ server.use(jsonServer.bodyParser);
 function generateToken(data: any) {
   return jwt.sign(data, SECRET_KEY);
 }
+
+server.get("/", (req: Request, res: Response) => {
+  res.status(200).json({ value: "API" });
+});
 
 // Rota de login
 server.post("/login", (req: Request, res: Response) => {
