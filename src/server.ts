@@ -112,7 +112,7 @@ server.post(
 
     router.db.get("events").push(newEvent).write();
 
-    res.status(201).json({ newEvent });
+    res.status(200).json({ newEvent });
   }
 );
 
