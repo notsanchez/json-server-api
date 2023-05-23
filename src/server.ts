@@ -110,9 +110,13 @@ server.post(
       created_by: tokenDecoded.id,
     };
 
-    router.db.get("events").push(newEvent).write();
+    const write = router.db.get("events").push(newEvent).write();
 
-    res.status(200).json({ newEvent });
+    if (write) {
+      res.status(200).json({ result: "Adicionado" });
+    } else {
+      res.status(200).json({ result: "Adicionado" });
+    }
   }
 );
 
