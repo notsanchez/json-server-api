@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123"
+    },
+    {
+      "id": 2,
+      "username": "admin2",
+      "password": "admin123"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "First Event",
+      "description": "event first description",
+      "price": "123,90",
+      "location": "Miami, USA",
+      "created_by": 1
+    },
+    {
+      "id": 1684845144766,
+      "title": "Evento 3",
+      "description": "Evento 3 description",
+      "price": "111",
+      "location": "SP",
+      "created_by": 1
+    },
+    {
+      "id": 1684845648681,
+      "title": "Evento 4",
+      "description": "Evento 4 description",
+      "price": "220",
+      "location": "Maringa",
+      "created_by": 2
+    }
+  ]
+}
